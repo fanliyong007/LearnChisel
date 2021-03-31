@@ -44,7 +44,7 @@ val btnDeb=Reg(Bool())
 when(tick){
     btnDeb := btnSync
 }
-val btnClean = filter(btnDeb,tick)
+val btnClean = filter(btnDeb,tick)  
 val risingEdge = rising(btnClean)
 val reg = RegInit(0.U(8.W))
 when(risingEdge){
